@@ -1,0 +1,8 @@
+@use "./functions" as func;
+
+.container {
+  max-width: func.container(1440, 110, 20);
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
