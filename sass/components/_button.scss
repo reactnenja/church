@@ -1,5 +1,5 @@
+@use "../utils/variables" as var;
 @use "../utils/mixins" as mix;
-
 .button-20 {
   @include mix.button($btnPadding: 20px 64px);
   border-radius: 14px;
@@ -19,15 +19,15 @@
 }
 
 .btn-black {
-  background-color: $black;
-  color: $btnColor;
+  background-color: var.$black;
+  color: var.$btnColor;
   backdrop-filter: blur(40px);
   &:hover {
-    color: $white;
+    color: var.$white;
   }
 }
 .btn-primary {
   backdrop-filter: blur(40px);
-  background-color: $btnColor;
-  color: $black;
+  background-color: var.$btnColor;
+  color: var.$black;
 }

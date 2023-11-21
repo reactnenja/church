@@ -83,6 +83,41 @@ body {
   font-weight: 900;
   src: url("/assets/fonts/roboto-condensed-v27-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+.button-20 {
+  padding: 20px 64px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.btn-24 {
+  padding: 24px 64px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.btn-black {
+  background-color: #161722;
+  color: #ffd2a4;
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+}
+.btn-black:hover {
+  color: #ffffff;
+}
+
+.btn-primary {
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  background-color: #ffd2a4;
+  color: #161722;
+}
+
 .container {
   max-width: 1260px;
   margin: 0 auto;
