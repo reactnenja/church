@@ -2,65 +2,116 @@
 @use "../utils/mixins" as mix;
 @use "../utils/variables" as var;
 
-.navbar {
-  width: 100%;
-  height: 80px;
-  background: var.$black;
-  .navigation {
-    height: 80px;
-    @include mix.flex($gap: 0px);
-    .logo-link {
-      width: 15%;
-      height: 100%;
-      @include mix.flex($jcontent: center, $gap: 0px);
-      border-right: 1px solid var.$grey;
-      .logo {
-        width: 132px;
-      }
+a {
+  text-decoration: none;
+}
+.header {
+  @media (max-width: 600px) {
+    width: 100%;
+    &-hero {
+      width: 100%;
     }
-    .menu {
-      width: 78%;
-      @include mix.flex($gap: 0px);
-      @media (min-width: 320px) and (max-width: 768px) {
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        left: -700px;
+  }
+  .navbar {
+    width: 100%;
+    background: black;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      #hamburger {
+        display: none;
+        @media (max-width: 768px) {
+          display: block;
+        }
+      }
+
+      .logo-link {
+        height: 80px;
         display: flex;
         justify-content: center;
-        flex-direction: column;
-        background-color: black;
+        align-items: center;
+        width: 18%;
+        border-right: 1px solid #e3e3e3;
+        @media (max-width: 1024px) {
+          width: 30%;
+          border-right: none;
+        }
+      }
+      .menu {
+        width: 91%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: 1024px) {
+          display: none;
+        }
         .nav-list {
+          width: 50%;
+          padding: 0px 30px;
           display: flex;
-          justify-content: center;
-          flex-direction: column;
+          justify-content: space-between;
           gap: 40px;
           .nav-item {
             .nav-link {
-              color: black;
+              color: #fff;
+              text-align: right;
+              font-size: 16px;
+              font-weight: 400;
+              text-transform: uppercase;
+              text-decoration: none;
             }
           }
         }
       }
-      .nav-list {
-        @include mix.flex($gap: 20px);
-        list-style-type: none;
+    }
+  }
+  @media (max-width: 768px) {
+    .header {
+      .navbar {
+        z-index: 3;
+        width: 100%;
+      }
+    }
+    .hide {
+      display: none;
+      transform: translateY(-900px);
+    }
+    .navbar-res.hide {
+      top: 0;
+    }
+    .navbar-res {
+      transition: all 0.9s;
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      z-index: 1;
 
-        .nav-item {
-          .nav-link {
-            text-decoration: none;
-            color: var.$white;
-            text-align: right;
-            font-size: 16px;
-            font-weight: 400;
+      .navbar-list {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        padding: 130px 0px;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .navbar-list__item {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 50px;
+          .navbar-link {
+            width: 100%;
+            color: wheat;
+            font-size: 25px;
             text-transform: uppercase;
-            padding: 14px 18px;
-            transition: all 0.9s;
-            &:hover {
-              transform: scale(0.8);
-              color: var.$btnColor;
-            }
           }
         }
       }

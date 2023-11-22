@@ -19,6 +19,15 @@
   text-transform: uppercase;
   border: none;
 }
+.btn-box {
+  @include mix.button($btnPadding: 22px);
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+  border: none;
+}
 
 .btn-black {
   background-color: var.$black;
