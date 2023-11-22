@@ -33,15 +33,13 @@
 // Utils section
 
 // site hero //
-
-.site-sections{
+.site-section{
     background-image: url(/assets/images/sermons/U_b-eSviHvs.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
     background-size: cover;
-    max-width: 100%;
-    height: 200px;
+    width: 100%;
+    height: 432px;
      
    
 }
@@ -62,8 +60,122 @@
     }
 
 }
-
 // site hero //
+
+
+
+//contact section// 
+ul{
+    list-style-type: none;
+
+}
+
+
+
+.contact-section__heading{
+    margin-top: 115px;
+    text-align: center;
+    
+    
+    &__one{
+        margin-bottom: 16px;
+        font-size: 16px;
+        font-weight: 400;
+
+    }
+    &__second{
+        color: var(--Black, #161722);
+        margin-right: auto;
+        margin-left: auto;
+            width: 554px;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 64px; 
+            letter-spacing: -0.48px;
+
+        
+    }
+}
+
+.img-date{
+        padding: 30px 32px 0px 378px; 
+}
+
+.contact-section__grid{
+    margin-top: 64px;
+    display: flex;
+    &__left{
+        width: 435px;
+        height: 512px;
+        background: #FFF5EB;
+       
+    }
+   
+}
+
+.pad{
+    margin: 0px 0px 16px 89px;
+}
+
+.contact-section__grid__left{
+    &__p{
+        @extend .pad;
+        background: var(--Gradient, linear-gradient(110deg, #A54E2B -53.83%, #DC9853 62.61%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__h{
+        @extend .pad;
+        width: 210px;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: -0.24px;
+    }
+
+    li{
+        @extend .pad;
+    }
+    
+
+}
+
+.content-section__grid__left__paragrapgh{
+    width: 256px;
+    @extend .pad;
+
+}
+
+
+.btn-black{
+    @extend .pad;
+    margin: 32px 115px 61px 89px;
+    &:hover{
+        transition: 0.5s;
+        background-color: white;
+        color: $textColor;
+    }
+}
+.contact-section__grid__right img{
+    width: 100%;
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

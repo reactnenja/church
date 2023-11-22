@@ -83,6 +83,41 @@ body {
   font-weight: 900;
   src: url("/assets/fonts/roboto-condensed-v27-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+.button-20 {
+  padding: 20px 64px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.btn-24 {
+  padding: 24px 64px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.btn-black {
+  background-color: #161722;
+  color: #ffd2a4;
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+}
+.btn-black:hover {
+  color: #ffffff;
+}
+
+.btn-primary {
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  background-color: #ffd2a4;
+  color: #161722;
+}
+
 .container {
   max-width: 1260px;
   margin: 0 auto;
@@ -90,14 +125,13 @@ body {
   padding-right: 20px;
 }
 
-.site-sections {
+.site-section {
   background-image: url(/assets/images/sermons/U_b-eSviHvs.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
   background-size: cover;
-  max-width: 100%;
-  height: 200px;
+  width: 100%;
+  height: 432px;
 }
 
 .site-section__hero {
@@ -114,4 +148,76 @@ body {
   line-height: 64px;
   letter-spacing: -0.48px;
   text-transform: uppercase;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.contact-section__heading {
+  margin-top: 115px;
+  text-align: center;
+}
+.contact-section__heading__one {
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.contact-section__heading__second {
+  color: var(--Black, #161722);
+  margin-right: auto;
+  margin-left: auto;
+  width: 554px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: -0.48px;
+}
+
+.img-date {
+  padding: 30px 32px 0px 378px;
+}
+
+.contact-section__grid {
+  margin-top: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contact-section__grid__left {
+  width: 435px;
+  height: 512px;
+  background: #FFF5EB;
+}
+
+.pad, .btn-black, .content-section__grid__left__paragrapgh, .contact-section__grid__left li, .contact-section__grid__left__h, .contact-section__grid__left__p {
+  margin: 0px 0px 16px 89px;
+}
+
+.contact-section__grid__left__p {
+  background: var(--Gradient, linear-gradient(110deg, #A54E2B -53.83%, #DC9853 62.61%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.contact-section__grid__left__h {
+  width: 210px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.24px;
+}
+.content-section__grid__left__paragrapgh {
+  width: 256px;
+}
+
+.btn-black {
+  margin: 32px 115px 61px 89px;
+}
+.btn-black:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.contact-section__grid__right img {
+  width: 100%;
 }
