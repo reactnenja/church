@@ -33,9 +33,6 @@
 // Utils section
 
 .header {
-  .navbar {
-    height: 80px;
-  }
   .site__hero-content {
     width: 100%;
     height: 500px;
@@ -253,16 +250,14 @@
       transform: scale(1.3);
     }
   }
-  .row-content__img{
-    width:100% ;
+  .row-content__img {
+    width: 100%;
     margin-bottom: 20px;
   }
-  .row__name{
+  .row__name {
     margin-bottom: 8px;
   }
-  .row__countre{
+  .row__countre {
     margin-bottom: 20px;
   }
-   
-
 }
