@@ -1,32 +1,55 @@
 @use "../utils/functions";
 @use "../utils/mixins" as mix;
 @use "../utils/variables" as var;
+
+a {
+  text-decoration: none;
+}
 .header {
+  @media (max-width: 600px) {
+    width: 100%;
+    &-hero {
+      width: 100%;
+    }
+  }
   .navbar {
     width: 100%;
     background: black;
     height: 80px;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
     .navigation {
       display: flex;
       justify-content: space-between;
       align-items: center;
       #hamburger {
         display: none;
+        @media (max-width: 768px) {
+          display: block;
+        }
       }
+
       .logo-link {
         height: 80px;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 12%;
+        width: 20%;
         border-right: 1px solid #e3e3e3;
+        @media (max-width: 1024px) {
+          width: 30%;
+          border-right: none;
+        }
       }
       .menu {
         width: 91%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-
+        @media (max-width: 1024px) {
+          display: none;
+        }
         .nav-list {
           width: 50%;
           padding: 0px 30px;
@@ -35,7 +58,7 @@
           gap: 40px;
           .nav-item {
             .nav-link {
-              color: var(--White, #fff);
+              color: #fff;
               text-align: right;
               font-size: 16px;
               font-weight: 400;
@@ -47,51 +70,50 @@
       }
     }
   }
-  .hide.res__menu {
-    top: 100px;
-  }
-}
-
-.res__menu {
-  position: fixed;
-  top: -500px;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  flex-direction: column;
-  padding: 30px;
-  gap: 40px;
-  border-radius: 0px 0px 20px 20px;
-  background-color: black;
-  .res__nav-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    flex-direction: column;
-    .res__nav-item {
-      padding: 10px 20px;
-      .res__nav-link {
-        text-decoration: none;
-        color: white;
-        font-size: 25px;
+  @media (max-width: 768px) {
+    .header {
+      .navbar {
+        z-index: 3;
+        width: 100%;
       }
     }
-  }
-}
-@media screen and (max-width: 1024px) {
-  .navbar {
-    width: 100%;
-    .navigation {
-      #hamburger {
-        display: block;
-      }
-      .logo-link {
-        width: 40%;
-        padding: 10px;
-        border-right: none;
-      }
-      .menu {
+    .hide {
+      display: none;
+      transform: translateY(-1900px);
+    }
+    .navbar-res.hide {
+      top: 0;
+    }
+    .navbar-res {
+      transition: all 0.9s;
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      z-index: 1;
+
+      .navbar-list {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        padding: 130px 0px;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .navbar-list__item {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 50px;
+          .navbar-link {
+            width: 100%;
+            color: wheat;
+            font-size: 25px;
+            text-transform: uppercase;
+          }
+        }
       }
     }
   }
