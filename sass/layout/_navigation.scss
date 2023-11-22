@@ -1,6 +1,10 @@
 @use "../utils/functions";
 @use "../utils/mixins" as mix;
 @use "../utils/variables" as var;
+
+a {
+  text-decoration: none;
+}
 .header {
   .navbar {
     width: 100%;
@@ -18,7 +22,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 12%;
+        width: 18%;
         border-right: 1px solid #e3e3e3;
       }
       .menu {
@@ -26,7 +30,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         .nav-list {
           width: 50%;
           padding: 0px 30px;
@@ -44,54 +47,6 @@
             }
           }
         }
-      }
-    }
-  }
-  .hide.res__menu {
-    top: 100px;
-  }
-}
-
-.res__menu {
-  position: fixed;
-  top: -500px;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  flex-direction: column;
-  padding: 30px;
-  gap: 40px;
-  border-radius: 0px 0px 20px 20px;
-  background-color: black;
-  .res__nav-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    flex-direction: column;
-    .res__nav-item {
-      padding: 10px 20px;
-      .res__nav-link {
-        text-decoration: none;
-        color: white;
-        font-size: 25px;
-      }
-    }
-  }
-}
-@media screen and (max-width: 1024px) {
-  .navbar {
-    width: 100%;
-    .navigation {
-      #hamburger {
-        display: block;
-      }
-      .logo-link {
-        width: 40%;
-        padding: 10px;
-        border-right: none;
-      }
-      .menu {
       }
     }
   }
