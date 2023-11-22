@@ -1,0 +1,27 @@
+// Buttons style
+@mixin button($btnPadding) {
+  padding: $btnPadding;
+}
+// Buttons style
+
+// grid mixin
+@mixin grid(
+  $column: 2,
+  $gap: 40px,
+  $jcontent: space-between,
+  $a-items: center
+) {
+  display: grid;
+  grid-template-columns: repeat($column, 1fr);
+  gap: $gap;
+  justify-content: $jcontent;
+  align-items: $a-items;
+}
+// grid mixin
+
+@mixin flex($jcontent: space-between, $a-items: center, $gap: 40px) {
+  display: flex;
+  justify-content: $jcontent;
+  align-items: $a-items;
+  gap: $gap;
+}

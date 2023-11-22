@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+// after
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+// after
+
+// parrents elements
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto Condensed";
+}
+// parrents elements
