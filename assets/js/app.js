@@ -1,7 +1,6 @@
 const hamburger = document.querySelector(".btn-toogle");
-const navLink = document.querySelector(".res__menu");
+const navLink = document.querySelector(".navbar-res");
 
 hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("hide");
   navLink.classList.toggle("hide");
 });
