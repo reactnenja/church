@@ -1,0 +1,9 @@
+@use "../utils/mixins" as mix;
+
+.grid {
+  @include mix.grid();
+}
+
+.dflex {
+  @include mix.flex();
+}

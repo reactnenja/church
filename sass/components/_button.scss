@@ -7,6 +7,7 @@
   font-weight: 400;
   line-height: 16px;
   text-transform: uppercase;
+  border: none;
 }
 
 .btn-24 {
@@ -16,18 +17,36 @@
   font-weight: 400;
   line-height: 16px;
   text-transform: uppercase;
+  border: none;
+}
+.btn-box {
+  @include mix.button($btnPadding: 22px);
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+  border: none;
 }
 
 .btn-black {
   background-color: var.$black;
   color: var.$btnColor;
   backdrop-filter: blur(40px);
+  border-color: var.$black;
+  transition: all 0.9s;
   &:hover {
     color: var.$white;
   }
 }
 .btn-primary {
   backdrop-filter: blur(40px);
+
   background-color: var.$btnColor;
   color: var.$black;
+  border-color: var.$btnColor;
+  transition: all 0.9s;
+  &:hover {
+    color: var.$white;
+  }
 }

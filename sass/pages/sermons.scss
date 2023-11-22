@@ -33,6 +33,10 @@
 // Utils section
 
 // site hero //
+
+
+
+
 .site-section{
     background-image: url(/assets/images/sermons/U_b-eSviHvs.svg);
     background-repeat: no-repeat;
@@ -76,16 +80,24 @@ ul{
     margin-top: 115px;
     text-align: center;
     
+    @media (max-width:425px){
+        
+    }
     
     &__one{
         margin-bottom: 16px;
         font-size: 16px;
         font-weight: 400;
+        width: 100%;
+        @media (max-width:500px){
+        font-size: 40px;
+    }
 
     }
     &__second{
         color: var(--Black, #161722);
         margin-right: auto;
+        width: 100%;
         margin-left: auto;
             width: 554px;
             font-size: 48px;
@@ -104,6 +116,10 @@ ul{
 .contact-section__grid{
     margin-top: 64px;
     display: flex;
+    @media(max-width:500px){
+        flex-direction: column;
+        
+    }
     &__left{
         width: 435px;
         height: 512px;
@@ -154,7 +170,7 @@ ul{
     &:hover{
         transition: 0.5s;
         background-color: white;
-        color: $textColor;
+        
     }
 }
 .contact-section__grid__right img{
@@ -162,6 +178,80 @@ ul{
     
     
 }
+
+// section event//
+
+.sec-event{
+    ul{
+       li {
+        @extend .similar-variables;
+        span{
+            width: 137px;
+            margin-left: 10px;
+        }
+       }
+    }
+    &__title{
+        text-align: center;
+
+        &__heading{
+            width: 554px;
+            font-size: 48px;
+            margin-top: 128px;
+            margin-bottom: 64px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+       
+    }
+    &__cards{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 10px;
+        @media (max-width:425px){
+            grid-template-columns: 1fr;
+            
+           
+        }
+        &__one{
+            width: 295px;
+            height: 454px;
+            background: var(--Light-orange, #FFF5EB);
+            &__p{
+                width: 119px;
+                @extend .similar-variables;
+                color: #A54E2B;
+                
+                
+            }
+            &__h{
+                @extend .similar-variables;
+                width: 220px;
+                margin-bottom: 16px;
+            }
+            &__paragraph{
+                @extend .similar-variables;
+                width: 214px;
+            }
+        }
+    }
+}
+
+ .similar-variables{
+    margin: 0px 159px 16px 40px;
+ }
+
+.sec-event__card__one__date{
+    width: 25px;
+    height: 20px;
+    font-size: 28px;
+    padding: 24px 40px 0px 240px;
+    margin-bottom: 10px;
+    
+}
+
+
 
 
 
