@@ -32,6 +32,21 @@
 @use "../utils/helpers";
 // Utils section
 
+// backtop//
+#backtop {
+  position: fixed;
+  background: #dc9853;
+  bottom: -50px;
+  right: 100px;
+  a {
+    display: block;
+    padding: 10px;
+  }
+  &.backtop-show {
+    bottom: 50px;
+  }
+}
+
 // site hero //
 .main {
   width: 100%;
@@ -103,11 +118,9 @@ ul {
 }
 
 .contact-section__grid {
-  width: 100%;
   margin-top: 64px;
   display: flex;
-  align-items: center;
-  gap: 50px;
+
   @media (max-width: 600px) {
     width: 100%;
     flex-direction: column;
