@@ -193,7 +193,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 18%;
+  width: 20%;
   border-right: 1px solid #e3e3e3;
 }
 @media (max-width: 1024px) {
@@ -253,9 +253,14 @@ a {
   }
   .hide {
     display: none;
+<<<<<<< HEAD
     -webkit-transform: translateY(-900px);
             transform: translateY(-900px);
     top: -100px;
+=======
+    -webkit-transform: translateY(-1900px);
+            transform: translateY(-1900px);
+>>>>>>> 08e3683f70ccb93991d3a66f2698f201c5fcafa4
   }
   .navbar-res.hide {
     display: block;
