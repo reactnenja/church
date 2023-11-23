@@ -1,0 +1,429 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto Condensed";
+}
+
+/* roboto-condensed-100 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 100;
+  src: url("/assets/fonts/roboto-condensed-v27-latin-100.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-condensed-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/assets/fonts/roboto-condensed-v27-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-condensed-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/roboto-condensed-v27-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-condensed-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/roboto-condensed-v27-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-condensed-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/fonts/roboto-condensed-v27-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-condensed-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/roboto-condensed-v27-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-condensed-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 800;
+  src: url("/assets/fonts/roboto-condensed-v27-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-condensed-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 900;
+  src: url("/assets/fonts/roboto-condensed-v27-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+.button-20 {
+  padding: 20px 64px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+  border: none;
+}
+
+.btn-24 {
+  padding: 24px 64px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+  border: none;
+}
+
+.btn-black {
+  background-color: #161722;
+  color: #ffd2a4;
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  border-color: #161722;
+  -webkit-transition: all 0.9s;
+  transition: all 0.9s;
+}
+.btn-black:hover {
+  color: #ffffff;
+}
+
+.btn-primary {
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  background-color: #ffd2a4;
+  color: #161722;
+  border-color: #ffd2a4;
+  -webkit-transition: all 0.9s;
+  transition: all 0.9s;
+}
+.btn-primary:hover {
+  color: #ffffff;
+}
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  background: #161722;
+}
+.navbar .navigation {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0px;
+}
+.navbar .navigation .logo-link {
+  width: 15%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0px;
+  border-right: 1px solid #f5f2f0;
+}
+.navbar .navigation .logo-link .logo {
+  width: 132px;
+}
+.navbar .navigation .menu {
+  width: 78%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0px;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .navbar .navigation .menu {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -700px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: black;
+  }
+  .navbar .navigation .menu .nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 40px;
+  }
+  .navbar .navigation .menu .nav-list .nav-item .nav-link {
+    color: black;
+  }
+}
+.navbar .navigation .menu .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  list-style-type: none;
+}
+.navbar .navigation .menu .nav-list .nav-item .nav-link {
+  text-decoration: none;
+  color: #ffffff;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 14px 18px;
+  -webkit-transition: all 0.9s;
+  transition: all 0.9s;
+}
+.navbar .navigation .menu .nav-list .nav-item .nav-link:hover {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  color: #ffd2a4;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dflex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.homes {
+  display: block;
+  width: 1500px;
+  height: 485px;
+  background: url(/church/assets/images/contact/backgraunt-img.png) no-repeat;
+  padding-top: 160px;
+  margin-top: 80px;
+}
+.homes .home {
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 0 140px;
+}
+.homes .home h3 {
+  display: block;
+  color: #FFD2A4;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.homes .home h1 {
+  width: 579px;
+  color: #FFF;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: -0.48px;
+  text-transform: uppercase;
+}
+@media (max-width: 750px) {
+  .homes .homes {
+    display: block;
+    width: 750px;
+    background-image: none;
+  }
+  .homes .home {
+    margin: 0;
+  }
+}
+@media (max-width: 400px) {
+  .homes .home h1 {
+    width: 400px;
+  }
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 1200px) {
+  .about {
+    grid-template-columns: 1fr;
+  }
+  .about .register {
+    margin: 0;
+  }
+  .about .adress {
+    margin-left: 110px;
+  }
+}
+@media (max-width: 750px) {
+  .about .register {
+    margin: 0;
+  }
+  .about .adress {
+    margin: 0;
+  }
+}
+.about .register {
+  margin: 128px 0;
+}
+.about .register h2 {
+  margin-left: 110px;
+  margin-bottom: 32px;
+}
+.about .register form {
+  display: grid;
+  grid-template-columns: repeat(1, 585px);
+  margin: 0 110px;
+}
+.about .register form input {
+  padding: 20px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}
+.about .register form .submit {
+  border-radius: 12px;
+  color: #1C1D28;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+  background: #FFD2A4;
+}
+@media (max-width: 750px) {
+  .about .register h2 {
+    margin: 0;
+  }
+  .about .register form {
+    margin: 0;
+  }
+}
+@media (max-width: 600px) {
+  .about .register form {
+    display: grid;
+    grid-template-columns: repeat(1, 400px);
+  }
+}
+.about .adress {
+  margin-top: 188px;
+}
+.about .adress .adres h4 {
+  color: #1E1B1B;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.about .adress .adres h2 {
+  width: 292px;
+  color: #161722;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.24px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.about .adress .tel h4 {
+  color: #1E1B1B;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.about .adress .tel h2 {
+  color: #161722;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.24px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.about .adress .partner h4 {
+  color: #1E1B1B;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.about .adress .partner img {
+  margin-right: 32px;
+}
