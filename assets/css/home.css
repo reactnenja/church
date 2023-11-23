@@ -253,14 +253,9 @@ a {
   }
   .hide {
     display: none;
-<<<<<<< HEAD
     -webkit-transform: translateY(-900px);
             transform: translateY(-900px);
     top: -100px;
-=======
-    -webkit-transform: translateY(-1900px);
-            transform: translateY(-1900px);
->>>>>>> 08e3683f70ccb93991d3a66f2698f201c5fcafa4
   }
   .navbar-res.hide {
     display: block;
@@ -354,7 +349,7 @@ a {
   margin-bottom: 80px;
   max-width: 592px;
   margin-bottom: 32px;
-  height: 199px;
+  height: 240px;
 }
 .header .header-hero .text__content-head h5 {
   color: #fff;
@@ -495,15 +490,44 @@ a {
   height: 900px;
 }
 .main .site-compass__head {
+  text-align: center;
   width: 100%;
+  height: 400px;
+}
+.main .site-compass__head span {
+  color: #161722;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.main .site-compass__head h2 {
+  margin-bottom: 32px;
+  color: #161722;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: -0.48px;
+  text-transform: uppercase;
+}
+.main .site-compass__head p {
+  max-width: 846px;
+  margin: 0 auto;
+  color: #161722;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 56px;
 }
 .main .site-compass__body {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  -webkit-box-pack: space-evenle;
-      -ms-flex-pack: space-evenle;
-          justify-content: space-evenle;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -511,7 +535,15 @@ a {
 .main .site-compass__body picture {
   width: 293px;
   height: 384px;
+  -webkit-transition: all 0.9s;
+  transition: all 0.9s;
 }
 .main .site-compass__body picture img {
   width: 100%;
+}
+.main .site-compass__body picture:hover {
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }

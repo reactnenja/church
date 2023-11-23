@@ -253,14 +253,9 @@ a {
   }
   .hide {
     display: none;
-<<<<<<< HEAD
     -webkit-transform: translateY(-900px);
             transform: translateY(-900px);
     top: -100px;
-=======
-    -webkit-transform: translateY(-1900px);
-            transform: translateY(-1900px);
->>>>>>> 08e3683f70ccb93991d3a66f2698f201c5fcafa4
   }
   .navbar-res.hide {
     display: block;

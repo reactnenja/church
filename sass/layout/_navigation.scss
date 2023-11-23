@@ -70,7 +70,6 @@ a {
       }
     }
   }
-<<<<<<< HEAD
 }
 
 .wrapper {
@@ -80,27 +79,6 @@ a {
   .header {
     .navbar {
       z-index: 3;
-=======
-  @media (max-width: 768px) {
-    .header {
-      .navbar {
-        z-index: 3;
-        width: 100%;
-      }
-    }
-    .hide {
-      display: none;
-      transform: translateY(-1900px);
-    }
-    .navbar-res.hide {
-      top: 0;
-    }
-    .navbar-res {
-      transition: all 0.9s;
-      display: flex;
-      justify-content: center;
-      position: fixed;
->>>>>>> 08e3683f70ccb93991d3a66f2698f201c5fcafa4
       width: 100%;
     }
   }
